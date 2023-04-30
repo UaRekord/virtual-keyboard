@@ -1,0 +1,93 @@
+:root {
+  --key-width: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  transition: 0.4s;
+}
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+
+.textarea,
+.keyboard {
+  width: 100%;
+}
+
+.textarea {
+  padding: 5px;
+  resize: none;
+  font-size: 1.6rem;
+}
+
+.keyboard {
+  padding: 10px;
+  background-color: blue;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.key {
+  width: var(--key-width);
+  height: calc(var(--key-width)*0.9);
+  background-color: gray;
+  border-radius: 5px;
+  display: flex;
+}
+
+.key:hover {
+  background-color: darkcyan ;
+  cursor: pointer;
+}
+
+.key span {
+  margin: 0 auto;
+  align-self: center;
+  color: bisque;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.Backspace,
+.Tab,
+.ShiftRight,
+.ControlLeft,
+.ControlRight {
+  width: calc(var(--key-width) * 1.6);
+  font-size: 1.4rem;
+}
+
+.Backspace > span > span
+{
+  font-size: 1.2rem;
+}
+
+.CapsLock,
+.Enter
+{
+  width: calc(var(--key-width) * 1.9);
+  font-size: 1.4rem;
+}
+
+.ShiftLeft {
+  width: calc(var(--key-width) * 2);
+}
+
+.Space {
+  width: calc(var(--key-width) * 6);
+}
