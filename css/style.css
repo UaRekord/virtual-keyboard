@@ -29,6 +29,7 @@
   padding: 5px;
   resize: none;
   font-size: 1.6rem;
+  pointer-events: none;
 }
 
 .keyboard {
@@ -90,4 +91,12 @@
 
 .Space {
   width: calc(var(--key-width) * 6);
+}
+
+.desc {
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  font-size: 2rem;
 }
