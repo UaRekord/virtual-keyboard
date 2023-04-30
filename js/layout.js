@@ -201,17 +201,11 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
   </div>
   <div class="row">
     <div class="key Tab">
-      <span class="rus hidden hidden">
-        <span class="case-down hidden">Tab</span>
-        <span class="case-up hidden">Tab</span>
-        <span class="caps hidden">Tab</span>
-        <span class="shift-caps hidden">Tab</span>
+      <span class="rus hidden">
+        <span class="case-down">Tab</span>
       </span>
       <span class="eng">
         <span class="case-down">Tab</span>
-        <span class="case-up hidden">Tab</span>
-        <span class="caps hidden">Tab</span>
-        <span class="shift-caps hidden">Tab</span>
       </span>
     </div>
     <div class="key KeyQ">
@@ -678,44 +672,44 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
     </div>
     <div class="key Comma">
       <span class="rus hidden">
-        <span class="case-down">л</span>
-        <span class="case-up hidden">Л</span>
-        <span class="caps hidden">Л</span>
-        <span class="shift-caps hidden">л</span>
+        <span class="case-down">б</span>
+        <span class="case-up hidden">Б</span>
+        <span class="caps hidden">Б</span>
+        <span class="shift-caps hidden">б</span>
       </span>
       <span class="eng">
-        <span class="case-down">k</span>
-        <span class="case-up hidden">K</span>
-        <span class="caps hidden">K</span>
-        <span class="shift-caps hidden">k</span>
+        <span class="case-down">,</span>
+        <span class="case-up hidden"><</span>
+        <span class="caps hidden">,</span>
+        <span class="shift-caps hidden"><</span>
       </span>
     </div>
     <div class="key Period">
       <span class="rus hidden">
-        <span class="case-down">д</span>
-        <span class="case-up hidden">Д</span>
-        <span class="caps hidden">Д</span>
-        <span class="shift-caps hidden">д</span>
+        <span class="case-down">ю</span>
+        <span class="case-up hidden">Ю</span>
+        <span class="caps hidden">Ю</span>
+        <span class="shift-caps hidden">ю</span>
       </span>
       <span class="eng">
-        <span class="case-down">l</span>
-        <span class="case-up hidden">L</span>
-        <span class="caps hidden">L</span>
-        <span class="shift-caps hidden">l</span>
+        <span class="case-down">.</span>
+        <span class="case-up hidden">></span>
+        <span class="caps hidden">.</span>
+        <span class="shift-caps hidden">></span>
       </span>
     </div>
     <div class="key Slash">
       <span class="rus hidden">
-        <span class="case-down">ж</span>
-        <span class="case-up hidden">Ж</span>
-        <span class="caps hidden">Ж</span>
-        <span class="shift-caps hidden">ж</span>
+        <span class="case-down">.</span>
+        <span class="case-up hidden">,</span>
+        <span class="caps hidden">.</span>
+        <span class="shift-caps hidden">,</span>
       </span>
       <span class="eng">
-        <span class="case-down">;</span>
-        <span class="case-up hidden">:</span>
-        <span class="caps hidden">;</span>
-        <span class="shift-caps hidden">:</span>
+        <span class="case-down">/</span>
+        <span class="case-up hidden">?</span>
+        <span class="caps hidden">/</span>
+        <span class="shift-caps hidden">?</span>
       </span>
     </div>
     <div class="key ArrowUp">
@@ -810,4 +804,8 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
     </div>
   </div>
 </div>
+</div>
+<div>
+  <p class="desc">Клавиатура создана в OC Windows</p>
+  <p class="desc">Переключить язык: left ctrl + alt</p>
 </div>`)
