@@ -1,5 +1,5 @@
 document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
-<textarea class="textarea" name="area" id="" cols="30" rows="10"></textarea>
+<textarea class="textarea" name="area" id="" cols="30" rows="10" disabled></textarea>
 <div class="keyboard">
   <div class="row">
     <div class="key Backquote">
