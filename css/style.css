@@ -100,3 +100,8 @@
   color: blue;
   font-size: 2rem;
 }
+
+.pressed-key {
+  background-color: darkcyan;
+  border-radius: 50%;
+}

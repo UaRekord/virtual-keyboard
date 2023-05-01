@@ -3,6 +3,7 @@ let keyboard = document.querySelector('.keyboard');
 let text = document.querySelector('.textarea');
 let rusLetters = document.querySelectorAll('.rus');
 let enLetters = document.querySelectorAll('.eng');
+let capsLockKey = document.querySelector('.CapsLock');
 
 let language = 'EN';
 let capsLock = false;
@@ -13,6 +14,7 @@ let specialKeys = {'Backspace':'Backspace', 'Minus':'-', 'Equal':'=', 'Tab':'  '
   'BracketLeft':'[', 'BracketRight':']', 'Slash':'/', 'AltRight':''};
 
 keyboard.addEventListener('click', addSymbol);
+capsLockKey.addEventListener('click', determineCapsLockKey);
 addEventListener('keydown', addKbdSymbol);
 
 // detremine symbol from virtual keyboard
@@ -28,6 +30,9 @@ function determineSymbol() {
   }
   if (language === 'RU') {
     output = rusificator(output);
+  }
+  if (capsLock) {
+    output = output.toUpperCase();
   }
   return output;
 }
@@ -45,7 +50,13 @@ function removeSymbol() {
   text.value = text.value.slice(0, -1);
 }
 
-function determineCapsLock() {
+function determineCapsLockKey() {
+  (event.getModifierState("CapsLock") || (event.target === capsLockKey && capsLock)) ?
+  capsLockKey.classList.add('pressed-key') : capsLockKey.classList.remove('pressed-key');
+  capsLock = !capsLock;
+ }
+
+function determineShiftKey() {
 
 }
 
@@ -65,6 +76,7 @@ function determineKbdSymbol() {
 // keyboard handler
 function addKbdSymbol() {
   languageSelector();
+  determineCapsLockKey();
   determineKbdSymbol();
 }
 
