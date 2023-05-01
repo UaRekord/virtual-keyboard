@@ -14,9 +14,10 @@ let capsLockKey = document.querySelector('.CapsLock');
 // flags and variables
 let language = 'EN';
 let capsLock = false;
+let virtShift = false;
 let specialKeys = {'Backspace':'Backspace', 'Minus':'-', 'Equal':'=', 'Tab':'\t',
   'Space':' ', 'Enter':'\n', 'Backquote':'`', 'ControlLeft':'', 'MetaLeft':'', 'ControlRight':'',
-  'AltLeft':'', 'ShiftLeft':'', 'ShiftRight':'', 'Semicolon':';', 'Quote':"'", 'ArrowUp':'\u2191',
+  'AltLeft':'',  'Semicolon':';', 'Quote':"'", 'ArrowUp':'\u2191', 'ShiftLeft':'', 'ShiftRight':'',
   'ArrowLeft':'\u2190', 'ArrowRight':'\u2192', 'ArrowDown':'\u2193', 'CapsLock':'', 'Backslash':'\\',
   'BracketLeft':'[', 'BracketRight':']', 'Slash':'/', 'AltRight':'', 'Comma':',', 'Period':'.'};
 
@@ -29,6 +30,11 @@ addEventListener('keyup', removeStyles);
 function determineSymbol() {
   let virtualKey = event.target.closest('div').classList[1];
   let output = '';
+  if (virtualKey === 'ShiftRight' || virtualKey === 'ShiftLeft') {
+    stylerShift();
+    virtShift = true;
+    output = '';
+  }
   if (virtualKey) {
     if (specialKeys[virtualKey] || specialKeys[virtualKey] == '') {
       output = specialKeys[virtualKey];
@@ -42,6 +48,7 @@ function determineSymbol() {
 
 // add or remove symbol to textarea, mouse handler
 function addSymbol() {
+  unStylerShift();
   let key = determineSymbol();
   (key === 'Backspace' || key === 'BACKSPACE') ? removeSymbol() : text.value += key;
   text.focus();
@@ -57,11 +64,13 @@ function determineCapsLockKey() {
    if ((event.target === capsLockKey || capsLockKey.children) && event.pointerType === 'mouse') {
         capsLockKey.classList.toggle('pressed-special-key');
         capsLock = !capsLock;
+        stylerCapsLock();
   }
 }
 
 function removeStyles() {
   document.querySelector(`.${event.code}`).classList.remove('pressed-special-key');
+  unStylerShift();
 }
 
 function addStyles() {
@@ -89,6 +98,7 @@ function determineKbdSymbol() {
     return '';
   }
   if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    stylerShift();
     return '';
   }
   if (event.code === 'Tab') {
@@ -136,7 +146,7 @@ function caseAndLangTransformer(letter) {
   if (capsLock) {
     letter = letter.toUpperCase();
   }
-  if (event.shiftKey) {
+  if (event.shiftKey || virtShift) {
     letter = letter.toUpperCase();
     if (caseEng[letter]) {
       letter = caseEng[letter];
@@ -148,14 +158,78 @@ function caseAndLangTransformer(letter) {
       letter = letter.toLowerCase();
     }
   }
-
   return letter;
 }
 
-function styler(style) {
- caseUpLetters = document.querySelectorAll('.case-up');
- caseDownLetters = document.querySelectorAll('.case-down');
- capsLetters = document.querySelectorAll('.caps');
- shiftCapsLetters = document.querySelectorAll('.shift-caps');
- enLetters.forEach((item) => item.classList.toggle('hidden'));
+function stylerCapsLock() {
+  if (capsLock) {
+    caseDownLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+    capsLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+  }
+  if (!capsLock) {
+    caseDownLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+    capsLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+  }
+  if (capsLock && event.shiftKey) {
+    caseDownLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+    capsLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+    shiftCapsLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+  }
+}
+
+function stylerShift() {
+  caseDownLetters.forEach(function(item){
+    item.classList.add('hidden');
+  });
+  caseUpLetters.forEach(function(item){
+    item.classList.remove('hidden');
+    });
+  if (capsLock) {
+    console.log('ttt');
+    capsLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+    shiftCapsLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+    caseUpLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+  }
+}
+
+function unStylerShift() {
+  caseUpLetters.forEach(function(item){
+    item.classList.add('hidden');
+  });
+  if (!capsLock) {
+    caseDownLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+  } else {
+    caseDownLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+    capsLetters.forEach(function(item){
+      item.classList.remove('hidden');
+    });
+    shiftCapsLetters.forEach(function(item){
+      item.classList.add('hidden');
+    });
+  }
+  virtShift = false;
 }

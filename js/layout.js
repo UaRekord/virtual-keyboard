@@ -202,10 +202,10 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
   <div class="row">
     <div class="key Tab">
       <span class="rus hidden">
-        <span class="case-down">Tab</span>
+        <span class="case">Tab</span>
       </span>
       <span class="eng">
-        <span class="case-down">Tab</span>
+        <span class="case">Tab</span>
       </span>
     </div>
     <div class="key KeyQ">
@@ -394,10 +394,10 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
   <div class="row">
     <div class="key CapsLock">
       <span class="rus hidden">
-        <span class="case-down">CapsLk</span>
+        <span class="case">CapsLk</span>
       </span>
       <span class="eng">
-        <span class="case-down">CapsLk</span>
+        <span class="case">CapsLk</span>
       </span>
     </div>
     <div class="key KeyA">
@@ -556,20 +556,20 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
     </div>
     <div class="key Enter">
       <span class="rus hidden">
-        <span class="case-down">Enter</span>
+        <span class="case">Enter</span>
       </span>
       <span class="eng">
-        <span class="case-down">Enter</span>
+        <span class="case">Enter</span>
       </span>
     </div>
   </div>
   <div class="row">
     <div class="key ShiftLeft">
       <span class="rus hidden">
-        <span class="case-down">Shift</span>
+        <span class="case">Shift</span>
       </span>
       <span class="eng">
-        <span class="case-down">Shift</span>
+        <span class="case">Shift</span>
       </span>
     </div>
     <div class="key KeyZ">
@@ -714,92 +714,92 @@ document.body.insertAdjacentHTML('afterbegin', `<div class="wrapper">
     </div>
     <div class="key ArrowUp">
       <span class="rus hidden">
-        <span class="case-down">&uarr;</span>
+        <span class="case">&uarr;</span>
       </span>
       <span class="eng">
-        <span class="case-down">&uarr;</span>
+        <span class="case">&uarr;</span>
       </span>
     </div>
     <div class="key ShiftRight">
       <span class="rus hidden">
-        <span class="case-down">Shift</span>
+        <span class="case">Shift</span>
       </span>
       <span class="eng">
-        <span class="case-down">Shift</span>
+        <span class="case-">Shift</span>
       </span>
     </div>
   </div>
   <div class="row">
     <div class="key ControlLeft">
       <span class="rus hidden">
-        <span class="case-down">Ctrl</span>
+        <span class="case">Ctrl</span>
       </span>
       <span class="eng">
-        <span class="case-down">Ctrl</span>
+        <span class="case">Ctrl</span>
       </span>
     </div>
     <div class="key MetaLeft">
       <span class="rus hidden">
-        <span class="case-down">Win</span>
+        <span class="case">Win</span>
       </span>
       <span class="eng">
-        <span class="case-down">Win</span>
+        <span class="case">Win</span>
       </span>
     </div>
     <div class="key AltLeft">
       <span class="rus hidden">
-        <span class="case-down">Alt</span>
+        <span class="case">Alt</span>
       </span>
       <span class="eng">
-        <span class="case-down">Alt</span>
+        <span class="case">Alt</span>
       </span>
     </div>
     <div class="key Space">
       <span class="rus hidden">
-        <span class="case-down">Space</span>
+        <span class="case">Space</span>
       </span>
       <span class="eng">
-        <span class="case-down">Space</span>
+        <span class="case">Space</span>
       </span>
     </div>
     <div class="key AltRight">
       <span class="rus hidden">
-        <span class="case-down">Alt</span>
+        <span class="case">Alt</span>
       </span>
       <span class="eng">
-        <span class="case-down">Alt</span>
+        <span class="case">Alt</span>
       </span>
     </div>
     <div class="key ArrowLeft">
       <span class="rus hidden">
-        <span class="case-down">&larr;</span>
+        <span class="case">&larr;</span>
       </span>
       <span class="eng">
-        <span class="case-down">&larr;</span>
+        <span class="case">&larr;</span>
       </span>
     </div>
     <div class="key ArrowDown">
       <span class="rus hidden">
-        <span class="case-down">&darr;</span>
+        <span class="case">&darr;</span>
       </span>
       <span class="eng">
-        <span class="case-down">&darr;</span>
+        <span class="case">&darr;</span>
       </span>
     </div>
     <div class="key ArrowRight">
       <span class="rus hidden">
-        <span class="case-down">&rarr;</span>
+        <span class="case">&rarr;</span>
       </span>
       <span class="eng">
-        <span class="case-down">&rarr;</span>
+        <span class="case">&rarr;</span>
       </span>
     </div>
     <div class="key ControlRight">
       <span class="rus hidden">
-        <span class="case-down">Ctrl</span>
+        <span class="case">Ctrl</span>
       </span>
       <span class="eng">
-        <span class="case-down">Ctrl</span>
+        <span class="case">Ctrl</span>
       </span>
     </div>
   </div>
